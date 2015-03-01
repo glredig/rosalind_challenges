@@ -1,10 +1,7 @@
 def reverse_complement():
 	dna = raw_input("String: ")
-
+	dna = dna[::-1]
 	dna = list(dna)
-
-	dna = reversed(dna)
-	print dna
 	for i in range(len(dna)):
 		if dna[i] == "A":
 			dna[i] = "T"
