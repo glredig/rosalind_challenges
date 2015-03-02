@@ -1,19 +1,15 @@
 def recurrence():
+	"""Comma separated assignment evaluates right side before assigning"""
 	multiplier = int(raw_input("Enter the multiplier (k): "))
 	term = int(raw_input("Enter the term which you wish to calculate: "))
 
-	term -= 2
+	a = 1
+	b = 1
 
-	immature = 0
-	mature = 1
-	current = 1
-
-	for i in range(term):
-		current += mature * multiplier 
-		mature += immature
-		immature = current - mature
+	for i in range(2, term):
+		a, b = b, a*multiplier + b
 	
-	print current
+	print b
 
 recurrence()
 	
