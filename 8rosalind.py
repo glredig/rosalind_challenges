@@ -51,16 +51,12 @@ def common_ancestor():
 					g.append(item[key])
 				elif key == 'C':
 					c.append(item[key])
-
-	print "
-	print "C: %s" % ' '.join(str(c))
+		final_string += max
 	
-				
-	print "A======"
-	print a		
-				
-	print counts
-
-	print strands
-
+	print final_string
+	print "A: %s" % ' '.join(map(str, a))
+	print "C: %s" % ' '.join(map(str, c))
+	print "G: %s" % ' '.join(map(str, g))
+	print "T: %s" % ' '.join(map(str, t))
+	
 common_ancestor()
