@@ -15,11 +15,11 @@ def common_ancestor():
 				strand = ''
 			else:
 				strand += line
-
-	for i in range(0, len(strands[0]) - 1):
+		strands.append(strand.rstrip())
+	for i in range(len(strands[0])):
 		a_0, t_0, g_0, c_0 = 0, 0, 0, 0
 
-		for j in range(0, len(strands) - 1):
+		for j in range(len(strands)):
 			if strands[j][i] == "A":
 				a_0 += 1
 			elif strands[j][i] == "T":
@@ -30,9 +30,9 @@ def common_ancestor():
 				c_0 += 1
 
 		count = {'A': a_0, 'T': t_0, 'G': g_0, 'C': c_0}
-
 		counts.append(count)
-
+	
+	print counts
 	for item in counts:
 		max = ''
 		max_val = 0
